@@ -1,0 +1,11 @@
+{
+  "serverConfig" :{
+    "server": {
+      "baseDir":"src",
+      "index":"test.html"
+    },
+    "ui":{
+      "port":3000
+    }
+  }
+}
