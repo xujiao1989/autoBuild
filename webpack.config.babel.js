@@ -13,7 +13,6 @@ const BUILD_PATH = path.resolve(ROOT_PATH,'build');//获取构建目录
 
 module.exports = {
 	entry:{
-
 	},
 	output:{
 		path:BUILD_PATH
