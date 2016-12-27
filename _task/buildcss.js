@@ -13,6 +13,7 @@ const sass = require('gulp-sass');
 const minifycss = require('gulp-clean-css');
 const csscomb = require("gulp-csscomb");
 const config = require('./taskConfig.json');
+const {delfolder} = require('./delFolder');
 
 const autoprefixer_conf = {
 	browsers:['last 2 versions','Android >=4.0']
@@ -21,7 +22,8 @@ const autoprefixer_conf = {
 
 module.exports = {
 	buildcss : ()=>{
-		return gulp.src(path.join(config.src.cssPath))
+		delfolder(config.temp.css);
+		return gulp.src(path.join(config.src.css))
 			.pipe(sass()).on('error', sass.logError)
 			.pipe(csscomb())
 			.pipe(gulp.dest(config.temp.css));

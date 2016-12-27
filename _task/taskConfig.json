@@ -1,24 +1,30 @@
 {
   "serverConfig" :{
     "server": {
-      "baseDir":"src",
-      "index":"test.html"
+      "baseDir":"temp",
+      "index":"html/index.html"
     },
     "ui":{
       "port":3000
     }
   },
   "src":{
+    "base":"src",
     "img":"src/img",
-    "cssPath":"src/css/*.scss"
+    "css":"src/css/*.scss",
+    "html":"src.html"
   },
   "build":{
+    "base":"build",
     "img":"build/img",
-    "css":"build/css"
+    "css":"build/css",
+    "html":"build/html"
   },
   "temp":{
+    "base":"temp",
     "css":"temp/css",
     "img":"temp/img",
-    "js":"temp/js"
+    "js":"temp/js",
+    "html":"temp/html"
   }
 }
