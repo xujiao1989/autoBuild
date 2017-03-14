@@ -34,7 +34,7 @@ gulp.task('buildhtml',function(){
 /*
 * 开发环境下，所有资源未压缩,在临时目录temp下
 * */
-gulp.task('dev',function() {
+gulp.task('dev',[],function() {
 	buildcss();
 	buildjs("src/js/test.js");
 	buildimg();
@@ -50,7 +50,14 @@ gulp.task('dev',function() {
 * */
 
 gulp.task('build',function(){
-
+    buildcss();
+    buildjs("src/js/test.js");
+    buildimg();
+    buildhtml();
+    gulp.watch('src/css/**/*.scss',['buildcss']);
+    gulp.watch('src/js/**/*.js',['buildjs']);
+    gulp.watch('src/img/**/*',['buildimg']);
+    gulp.watch('src/html/**/*.html',['buildhtml']);
 });
 
 
